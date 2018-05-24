@@ -1,0 +1,15 @@
+<ion-content>
+    <div class="">
+        <label class="item item-input">
+        <input type="text" placeholder="Username" ng-model="username">
+        </label>
+        <label class="item item-input">
+        <input type="password" placeholder="Password" ng-model="password">
+        </label>
+        <ion-checkbox ng-model="rememberMe">Remember Me</ion-checkbox>
+    </div>
+    <div>
+        <button class="button button-block button-royal" ng-click="login()">Login</button>
+        <button class="button button-block button-balanced" ng-click="fingerprintLogin()">Login with FingerPrint</button>
+    </div>
+</ion-content>
