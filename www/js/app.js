@@ -21,4 +21,21 @@ app.run(function($ionicPlatform) {
       StatusBar.styleDefault();
     }
   });
-})
+});
+
+app.config(function($stateProvider, $urlRouterProvider){
+
+    $stateProvider.state('login', {
+        url: '/login',
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl'
+    })
+
+    .state('dashboard', {
+        url: '/dashboard',
+        templateUrl: 'templates/dashboard.html',
+        controller: 'DashCtrl'
+    });
+
+    $urlRouterProvider.otherwise('/login');
+});

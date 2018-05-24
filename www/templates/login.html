@@ -1,15 +1,17 @@
-<ion-content>
-    <div class="">
-        <label class="item item-input">
-        <input type="text" placeholder="Username" ng-model="username">
-        </label>
-        <label class="item item-input">
-        <input type="password" placeholder="Password" ng-model="password">
-        </label>
-        <ion-checkbox ng-model="rememberMe">Remember Me</ion-checkbox>
-    </div>
-    <div>
-        <button class="button button-block button-royal" ng-click="login()">Login</button>
-        <button class="button button-block button-balanced" ng-click="fingerprintLogin()">Login with FingerPrint</button>
-    </div>
-</ion-content>
+<ion-view>
+    <ion-content class="padding">
+        <div>
+            <label class="item item-input">
+                <input type="text" placeholder="Username" ng-model="auth.username">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="Password" ng-model="auth.password">
+            </label>
+            <ion-checkbox ng-model="rememberMe.checked" ng-change="saveLogin()">Remember Me</ion-checkbox>        
+        </div>
+        <div>
+            <button class="button button-block button-royal" ng-click="login()">Login</button>
+            <button class="button button-block button-balanced" ng-click="fingerprintLogin()" ng-show="showFingerprint">Login with FingerPrint</button>
+        </div>
+    </ion-content>
+</ion-view>
